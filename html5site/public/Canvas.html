@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Demo</title>
+    <style>
+       #myCanvas{
+           border:1px solid green;
+       }
+    </style>
+</head>
+<body>
+    <!--Canvas預設大小300寬150高-->
+    <canvas id="myCanvas" width="400px" height="300px"></canvas>
+
+    <script>
+        var canvas = document.querySelector('#myCanvas');
+        var context = canvas.getContext('2d');
+    
+        //陰影效果
+        // context.shadowOffsetX=5;
+        // context.shadowOffsetY=5;
+        // context.shadowBlur=4;
+        // context.shadowColor="rgba(0,0,0,0.5)"
+        
+        
+        // //畫筆顏色
+        // context.fillStyle="silver";
+        // context.strokeStyle="blue";
+        // //畫筆粗細
+        // context.lineWidth = 2;
+
+        // //矩形
+        // context.strokeRect(100,160,200,90)
+        // context.fillRect(100,50,200,90)
+        // context.clearRect(150,70,100,60)
+        //畫線
+        // context.beginPath();
+        // context.moveTo(100,150);
+        // context.lineTo(250,75);
+        
+        // context.closePath();
+        // context.lineWidth=5;
+        // context.strokeStyle='red';
+        // context.stroke();如果是三個點要填滿就是用context.fill()
+        //畫弧
+        // context.arc(100,100,30,Math.PI*1,Math.PI*1.5,false);
+        // context.lineWidth=3;
+        // context.strokeStyle="black"
+        // context.lineTo(100,100)//要畫完整扇形就要加第三個點
+        // context.fill()
+
+        // //畫圖
+        // var imageObj=new Image();
+        // imageObj.src="images/cars.jpg"
+        // imageObj.onload=function(){
+        //     context.drawImage(imageObj,0,0)
+        //     context.drawImage(imageObj,0,0,200,150);
+        //     context.drawImage(imageObj,190,85,200,180,0,0,100,90)//裁切 第二 三個參數代表從原圖哪裡開始切
+
+        // }
+
+        //寫字
+        var x=canvas.width/2;
+        var y=canvas.height/2;
+        context.font="30pt Calibri";
+        context.textAlign="center";
+        context.textBaseline="middle";
+        // context.fillStyle="#0000ff";
+        // context.fillText("hello world",x,y)
+        context.strokeStyle="#0000ff";
+        context.strokeText("hello world",x,y)
+
+
+
+    </script>
+</body>
+</html>
